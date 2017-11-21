@@ -211,3 +211,8 @@ form {
         caret-blink  1.25s step-end infinite;
 }
 
+.thumbnail {
+    width: 450px;
+    margin: 0 auto;
+}
+
