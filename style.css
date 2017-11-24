@@ -29,9 +29,6 @@ h2:before, .link:hover, .circle-link:hover {
     border: solid 2px #23292d;
 }
 
-.main-well {
-    background-color:#FCFCFC;
-}
 
 .navbar {
     background-color: #313638;
@@ -90,12 +87,6 @@ h2:before {
     border-bottom:0px;
 }
 
-.main-well {
-    border: none !important;
-    border-radius:0;
-    margin-top:0px;
-    margin-bottom:0px;
-}
 
 .nopad {
     padding: 0 !important;
@@ -125,8 +116,6 @@ h2:before {
 }
 
 
-.thumbnail{
-}
 
 .navbar {
     border-width: 0px;
@@ -212,7 +201,15 @@ form {
 }
 
 .thumbnail {
-    width: 450px;
-    margin: 0 auto;
+    margin: 10px auto;
+}
+
+@media screen and (max-width) {
+    
+    
+
+
+
+
 }
 
