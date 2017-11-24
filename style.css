@@ -183,6 +183,7 @@ form {
     font-size: 60px;
     font-family: 'Inconsolata', monospace;
     padding-bottom: 20px;
+    opacity: 0;
 }
 
 .desc {
@@ -206,6 +207,10 @@ form {
 
 @media only screen and (max-width: 550px) {
     #heading {
-        font-size: 12vw;
+        font-size: 11vw;
+    }
+    #caret {
+        height: 11vw;
+        width: 5.5vw;
     }
 }

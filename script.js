@@ -9,7 +9,7 @@ $(document).ready(function(){
             }, 1000);
         }
     });
-   /*animateType();*/
+   animateType();
     var curr = [];
     $(window).scroll(function() {
         var scrollPos = $(document).scrollTop();
@@ -36,11 +36,13 @@ function underlineLink(link) {
 
 function animateType() {
     $('.type').each(function(){
-        var str = $(this).attr('value'),
+        var str = $(this).html(),
             id = setInterval(typeKey, 100),
             element=$(this),
             i=0;
 
+        element.empty();
+        element.css('opacity', '1');
         function typeKey() {
             if (i > str.length) clearInterval(id);
             else {
