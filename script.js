@@ -9,7 +9,7 @@ $(document).ready(function(){
             }, 1000);
         }
     });
-   // animateType();
+   /*animateType();*/
     var curr = [];
     $(window).scroll(function() {
         var scrollPos = $(document).scrollTop();
