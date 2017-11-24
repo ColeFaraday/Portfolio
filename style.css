@@ -187,7 +187,7 @@ form {
 
 .desc {
     margin-top: 30px;
-    font-size: ;
+    font-size: 22px;
 }
 
 #caret {
@@ -204,4 +204,8 @@ form {
     margin: 10px auto;
 }
 
-
+@media only screen and (max-width: 550px) {
+    #heading {
+        font-size: 12vw;
+    }
+}
