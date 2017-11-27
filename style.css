@@ -3,17 +3,19 @@
 /*main text colour*/
 
 h1, h2, h3, h4, h5, h6, p, .circle-link {
-    color: black;
+    color: #DBE8D4;
 }
 
 /* bottom border highlight colour */
-h2:before, .link:hover, .circle-link:hover {
-    border-color: #9577FF!important;
+h2:before {
+    border-color: #525e65 !important;
+}
+.link:hover, .circle-link:hover   {
+    border-color: #6FB8B9;
 }
 
-
 #heading {
-    color:  white !important;
+    color: #DBE8D4 !important;
 }
 
 .circle-link:hover  {
@@ -21,7 +23,7 @@ h2:before, .link:hover, .circle-link:hover {
 }
 
 .desc {
-    color: #DFDFDF; 
+    color: #DBE8D4 !important;
 }
 
 
@@ -31,11 +33,11 @@ h2:before, .link:hover, .circle-link:hover {
 
 
 .navbar {
-    background-color: #313638;
+    background-color: #525e65;
 }
 
 hr {
-    border-color: #ccc; 
+    border-color: #525e65; 
 }
 
 .btn-primary {
@@ -56,8 +58,8 @@ hr {
 body {
     padding: 0;
     padding-top: 50px;
-    background-color: white;
-    color: #23292d !important;
+    background-color: #40495F;
+    color: white !important;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -72,18 +74,18 @@ h2:before {
     position: absolute;
     content: "";
     height: 1px;
-    left: 15%;
-    bottom: 0;
-    width: 70%;
+    left: -25%;
+    bottom: -20px;
+    width: 150%;
     border-bottom: 5px solid transparent;
 }
 
 #top-well {
-    background-color: #5032AE;  
+    background-color: #222733;
     border-radius: 0px;
     border: none !important;
-    padding-bottom: 40px;
-    margin-bottom:0px;
+    padding-bottom: 150px;
+    margin-bottom:50px;
     border-bottom:0px;
 }
 
@@ -103,7 +105,7 @@ h2:before {
     color: white !important;
     text-transform:uppercase;
     font-size: 16px;
-    margin: 20px 10px;
+    margin: 15px 10px 5px 10px;
     border-bottom: 5px solid transparent;
     line-height: 0px !important;
     padding: 0;
@@ -119,6 +121,7 @@ h2:before {
 
 .navbar {
     border-width: 0px;
+    box-shadow: 0 2px 3px #222e35;
 }
 
 ul.navbar-nav {
@@ -189,6 +192,7 @@ form {
 .desc {
     margin-top: 30px;
     font-size: 22px;
+    width: 800px;
 }
 
 #caret {
@@ -205,6 +209,118 @@ form {
     margin: 10px auto;
 }
 
+.showcase {
+    display: block;
+    position: relative;
+    margin: 30px 20px;
+    border-radius: 10px;
+    border: 1px solid #525e65;
+    box-shadow: 2px 2px 2px #525e65;
+}
+
+.overlay {
+    position: absolute;
+    background-color: black;
+    opacity: 0.5; 
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: opacity 0.2s;
+}
+.showcase:hover>.overlay {
+    opacity: 0.2;
+}
+
+.showcase:hover>.showcase-heading {
+    font-size: 32px;
+}
+
+
+.showcase:hover, .showcase:visited, .showcase:focus {
+    text-decoration: none;
+}
+
+
+
+#showcase1 {
+    background: url('calculator.png') no-repeat center center;
+    background-color: #7180AC;   
+    background-size: 100%;
+}
+
+#showcase2 {
+    background: url('twitch.png') no-repeat center center;
+    background-color: #7180AC;   
+    background-size: 100%;
+}
+
+#showcase3 {
+    background: url('wikipedia.png') no-repeat center center;
+    background-size: 100%;
+    background-color: #28464B;
+}
+
+#showcase4 {
+    background: url('calculator.png') no-repeat center center;
+    background-size: 100%;
+}
+
+#showcase5 {
+    background: url('calculator.png') no-repeat center center;
+    background-size: 100%;
+}
+
+#showcase6 {
+    background: url('calculator.png') no-repeat center center;
+    background-size: 100%;
+}
+
+.showcase-heading {
+    position: relative;
+    width: 250px;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 0 0 black, -1px 0 0 black, 0 1px 0 black, 0 -1px 0 black;
+    transition: font-size 0.2s;
+}
+
+.detail {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    bottom: 0;
+    left: 0;
+    margin-right: 20px;
+    display: none;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    font-size: 16px;
+    margin-top: 138px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+}
+
+.detail>p {
+    color: white;
+
+}
+
+.showcase:hover>.detail {
+}
+
+
+#skills {
+    margin-bottom: 150px;
+}
+
+
+
 @media only screen and (max-width: 550px) {
     #heading {
         font-size: 11vw;
@@ -214,3 +330,4 @@ form {
         width: 5.5vw;
     }
 }
+

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     $('a[href^="#"').on('click', function(event){
         var target = $(this.getAttribute("href"));
 
@@ -9,6 +10,11 @@ $(document).ready(function(){
             }, 1000);
         }
     });
+
+   resizeShowcase(); 
+   $(window).resize(function() {
+        resizeShowcase(); 
+   });
    animateType();
     var curr = [];
     $(window).scroll(function() {
@@ -35,20 +41,28 @@ function underlineLink(link) {
 }
 
 function animateType() {
-    $('.type').each(function(){
-        var str = $(this).html(),
-            id = setInterval(typeKey, 100),
-            element=$(this),
-            i=0;
+    var time = 0;
+    $('.type').each(function(i, e) {
+       setTimeout(function() {
+           var id = setInterval(typeKey, 100),
+               str = $(e).html(),
+               i = 0;
 
-        element.empty();
-        element.css('opacity', '1');
-        function typeKey() {
-            if (i > str.length) clearInterval(id);
-            else {
-                element.html('<strong>></strong>' + str.slice(0, i) + "<span id='caret'></span>");
-            }
-            i++;
-        }
+           $(e).empty();
+           $(e).css('opacity', '1');
+           function typeKey() {
+               if (i > str.length) clearInterval(id);
+               else {
+                   $(e).html('<strong>></strong>' + str.slice(0, i) + "<span id='caret'></span>");
+               }
+               i++;
+           }
+       }, i*500);
+    });
+}
+function resizeShowcase() {
+    $('.showcase').each(function() {
+        var cw = $(this).width();
+        $(this).css('height',cw*3/4+'px');
     });
 }
