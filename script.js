@@ -1,44 +1,28 @@
+var curr,
+    override=-1;
 $(document).ready(function(){
 
     $('a[href^="#"').on('click', function(event){
         var target = $(this.getAttribute("href"));
+        override = $(this);
 
         if(target.length) {
             event.preventDefault();
             $("html, body").stop().animate({
                 scrollTop : target.offset().top-100
-            }, 1000);
+            }, 1000, function() { override=-1 });
         }
     });
+
+    currLink();
+    $(window).scroll(currLink);
 
    resizeShowcase(); 
    $(window).resize(function() {
         resizeShowcase(); 
    });
    animateType();
-    var curr = [];
-    $(window).scroll(function() {
-        var scrollPos = $(document).scrollTop();
-        var count = $('a[href^="#"').length-1;
-    });
 });
-
-function visible(elem) {
-    var top_elem = elem.offset().top,
-        bot_elem = elem.offset().top + elem.outerHeight(),
-        bot_screen = $(window).scrollTop() + window.innerHeight,
-        top_screen = $(window).scrollTop();
-
-    if ((bot_screen > top_elem) && (top_screen < bot_elem)) return true;
-    return false;
-
-
-}
-
-function underlineLink(link) {
-    $('a[href^="#"').css('border-bottom-color', 'transparent');
-    link.css('border-bottom-color', 'white');
-}
 
 function animateType() {
     var time = 0;
@@ -65,4 +49,29 @@ function resizeShowcase() {
         var cw = $(this).width();
         $(this).css('height',cw*3/4+'px');
     });
+}
+
+function currLink() {
+    var scrollPos = $(document).scrollTop();
+    
+    $('.link').each(function(i, el) {
+        var link = $($(el).attr('href'));
+        if (aboveCenter(link)) curr=el;
+    });
+    $('.link').css('border-color', 'transparent');
+    if (override != -1) override.css('border-color', '#6FB8B9');
+    else $(curr).css('border-color', '#6FB8B9');
+
+
+}
+
+function aboveCenter(elem) {
+    var top_elem = elem.offset().top,
+        bot_elem = elem.offset().top + elem.outerHeight(),
+        mid_screen = $(window).scrollTop() + window.innerHeight/2,
+        top_screen = $(window).scrollTop();
+
+    if ((mid_screen >= top_elem) && (top_screen <= bot_elem)) return true;
+    return false;
+
 }

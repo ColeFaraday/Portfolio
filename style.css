@@ -11,7 +11,7 @@ h2:before {
     border-color: #6FB8B9 !important;
 }
 .link:hover, .circle-link:hover   {
-    border-color: #6FB8B9;
+    border-color: #6FB8B9 !important;
 }
 
 #heading {
