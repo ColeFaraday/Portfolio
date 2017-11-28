@@ -342,9 +342,28 @@ form {
     #heading {
         font-size: 11vw;
     }
+
     #caret {
         height: 11vw;
         width: 5.5vw;
     }
+
 }
 
+
+@media only screen and (max-width: 620px) {
+    .skill-img {
+        width: 25vw;
+        height: 25vw;
+        margin: 1vw;
+    }
+
+    .center {
+        padding: 1px;
+        margin: 0px;
+    }
+
+    #skills {
+        margin: 0px;
+    }
+}
