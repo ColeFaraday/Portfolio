@@ -107,6 +107,8 @@ h2:before {
 .skill-img {
     display: inline-block;
     margin: 20px;
+    width: 150px;
+    height: 150px;
 }
 
 
@@ -260,35 +262,35 @@ form {
 
 
 #showcase1 {
-    background: url('calculator.png') no-repeat center center;
+    background: url('resources/images/calculator.png') no-repeat center center;
     background-color: #7180AC;   
     background-size: 100%;
 }
 
 #showcase2 {
-    background: url('twitch.png') no-repeat center center;
+    background: url('resources/images/twitch.png') no-repeat center center;
     background-color: #7180AC;   
     background-size: 100%;
 }
 
 #showcase3 {
-    background: url('wikipedia.png') no-repeat center center;
+    background: url('resources/images/wikipedia.png') no-repeat center center;
     background-size: 100%;
     background-color: #28464B;
 }
 
 #showcase4 {
-    background: url('calculator.png') no-repeat center center;
+    background: url('resources/images/calculator.png') no-repeat center center;
     background-size: 100%;
 }
 
 #showcase5 {
-    background: url('calculator.png') no-repeat center center;
+    background: url('resources/images/calculator.png') no-repeat center center;
     background-size: 100%;
 }
 
 #showcase6 {
-    background: url('calculator.png') no-repeat center center;
+    background: url('resources/images/calculator.png') no-repeat center center;
     background-size: 100%;
 }
 
@@ -337,6 +339,23 @@ form {
 }
 
 
+
+.service-list p {
+    text-align: left;
+    font-size: 16px;
+}
+
+.service-list h4 {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.service-item {
+    margin: 40px 0;
+    padding: 0px 30px;
+}
 
 @media only screen and (max-width: 550px) {
     #heading {
