@@ -1,8 +1,6 @@
 var curr,
     override=-1;
 
-if(window.jQuery) alert('works');
-
 $(document).ready(function(){
     $('a[href^="#"').on('click', function(event){
         var target = $(this.getAttribute("href"));

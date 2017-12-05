@@ -6,6 +6,7 @@ h1, h2, h3, h4, h5, h6, p, .circle-link {
     color: #DBE8D4;
 }
 
+
 /* bottom border highlight colour */
 h2:before {
     border-color: #6FB8B9 !important;
@@ -57,6 +58,14 @@ hr {
     50% { background-color: transparent}
 }
 
+/* Fonts */
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2, h3, h4 {
+    font-family: 'Open Sans', sans-serif;
+}
 
 /*Main Css*/
 body {
@@ -67,12 +76,19 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-
-h2 {
+h2, h4 {
     padding-bottom: 10px;
     display: inline-block;
     position: relative;
     letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 22px;
 }
 
 h2:before {
@@ -200,7 +216,7 @@ form {
     font-size: 60px;
     width: 100%;
     margin: 0 auto;
-    margin-top: 200px;
+    margin-top: 150px;
     font-family: 'Inconsolata', monospace;
     padding-bottom: 20px;
     opacity: 0;
@@ -344,19 +360,30 @@ form {
 
 .service-list p {
     text-align: left;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .service-list h4 {
-    font-size: 20px;
-    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    font-family: 'Open Sans', light;
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
 
+h4:before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    left: -10%;
+    bottom: -2px;
+    width: 120%;
+    border-bottom: 5px solid #525e65;
+}   
+
 .service-item {
-    margin: 40px 0;
-    padding: 0px 30px;
+    margin-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 @media only screen and (max-width: 550px) {
