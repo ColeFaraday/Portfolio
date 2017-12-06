@@ -9,7 +9,7 @@ $(document).ready(function(){
         if(target.length) {
             event.preventDefault();
             $("html, body").stop().animate({
-                scrollTop : target.offset().top-100
+                scrollTop : target.offset().top-100+target.innerWidth() - target.width()
             }, 1000, function() { override=-1 });
         }
     });
