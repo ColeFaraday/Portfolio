@@ -9,7 +9,7 @@ $(document).ready(function(){
         if(target.length) {
             event.preventDefault();
             $("html, body").stop().animate({
-                scrollTop : target.offset().top-100+target.innerWidth() - target.width()
+                scrollTop : target.offset().top - parseInt(target.css('margin-top')) -  parseInt($('.navbar').height())
             }, 1000, function() { override=-1 });
         }
     });
@@ -37,7 +37,7 @@ function animateType() {
            function typeKey() {
                if (i > str.length) clearInterval(id);
                else {
-                   $(e).html('<strong>></strong>' + str.slice(0, i) + "<span id='caret'></span>");
+                   $(e).html('<strong>></strong>' + str.slice(0, i) + "<span id='caret'></span>" + '<span class="invis">' + str.slice(i) +'</span>');
                }
                i++;
            }
