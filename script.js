@@ -10,7 +10,7 @@ $(document).ready(function(){
             event.preventDefault();
             $("html, body").stop().animate({
                 scrollTop : target.offset().top - parseInt(target.css('margin-top')) -  parseInt($('.navbar').height())
-            }, 1000, function() { override=-1 });
+            }, 800, function() { override=-1 });
         }
     });
 
